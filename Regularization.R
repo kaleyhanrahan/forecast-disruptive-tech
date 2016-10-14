@@ -1,6 +1,11 @@
+# Chudds
+
+
 library(MASS)
 library(car)
 library(lars)
+
+# We are trying to figure out Ridge and Lasso Regression for Dr. Gerber's class
 
 data(Prestige)
 
@@ -21,6 +26,8 @@ lasso.response = as.numeric(Prestige[,4])
 lasso.fit = lars(lasso.predictors, lasso.response, type = "lasso")
 coef(lasso.fit)
 lasso.fit$lambda
+
+##### KALEY'S CHANGE
 
 # Will the lasso regression lambdas change if we rescale the predictors to [0,1]?
 normalized.lasso.predictors = apply(lasso.predictors, 2, function(lasso.predictor)
