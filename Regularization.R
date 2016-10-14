@@ -2,6 +2,8 @@ library(MASS)
 library(car)
 library(lars)
 
+# We are trying to figure out Ridge and Lasso Regression for Dr. Gerber's class
+
 data(Prestige)
 
 ##### Ridge Regression #####
